@@ -1,3 +1,4 @@
+import { EventDetailComponent } from './event-detail/event-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -30,7 +31,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
     CurrentEventsComponent,
     SearchComponent,
     IndividualTeamComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

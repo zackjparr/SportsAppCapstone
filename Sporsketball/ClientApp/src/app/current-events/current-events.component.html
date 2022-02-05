@@ -3,12 +3,12 @@
 
 <div *ngIf="eventsList">
 <div *ngFor="let event of filteredEvents">
-<div class="indivEvent">
+<div (click)="Toggle(event.idEvent)" class="indivEvent">
     <p>{{event.strEvent}}</p>
-    <p>{{event.strSport}} || {{event.strCountry}} || {{event.strLeague}}</p>
-    <p>{{event.strHomeTeam}}: {{event.intHomeScore}}</p>
-    <p>{{event.strAwayTeam}}: {{event.intAwayScore}}</p>
-    <p>{{event.dateEvent}}</p>
+    <p>{{event.strSport}} | {{event.strCountry}} | {{event.strLeague}}</p>
+</div>
+<div class="eventDetail">
+  <app-event-detail id="eventDetail{{event.idEvent}}" [event]="event" style="display: none"></app-event-detail>
 </div>
 </div>
 </div>

@@ -1,0 +1,9 @@
+<div class="eventDetail">
+<img *ngIf="event.strThumb"style="width:200px" src="{{event.strThumb}}">
+<p *ngIf="event.strVenue">Venue: {{event.strVenue}}</p>
+<p *ngIf="event.strCity">City: {{event.strCity}}</p>
+<p *ngIf="event.strTime">Time (GMT): {{event.strTime}}</p>
+<p *ngIf="event.dateEvent">Date: {{event.dateEvent | date}}</p>
+<p *ngIf="event.intHomeScore && event.intAwayScore">Score: {{event.strHomeTeam}}: {{event.intHomeScore}} | {{event.strAwayTeam}}: {{event.intAwayScore}}</p>
+<p *ngIf="event.strVideo"><a href="{{event.strVideo}}">Highlight Reel</a></p>
+</div>

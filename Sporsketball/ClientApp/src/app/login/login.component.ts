@@ -20,7 +20,9 @@ export class LoginComponent implements OnInit {
 
   Login(){
     this.userService.LoginUser(this.loginData);
-    this.route.navigate(['']);
+    this.route.navigate(['']).then( () =>
+     {window.location.reload();}
+    );
   }
 
 }

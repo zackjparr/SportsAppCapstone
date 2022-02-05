@@ -34,5 +34,6 @@ export class CreatePostComponent implements OnInit {
     this.createPost.GetBoard().subscribe(
       (response:any) => {this.board = response}
     );
+    location.reload();
   }
 }

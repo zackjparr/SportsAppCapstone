@@ -13,6 +13,10 @@ namespace Sporsketball.Models
         public int TeamId { get; set; }
         public string Thumbnail { get; set; }
         public string TeamName { get; set; }
+
+        //this was bogging down the loading
+        //and all we were using was thumbnail and Team Name 
+        //so i just adjusted the DB to have these things
         //public TeamData? Data { get; set; }
     }
 }

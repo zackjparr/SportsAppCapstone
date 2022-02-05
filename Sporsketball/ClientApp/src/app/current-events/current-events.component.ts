@@ -21,21 +21,34 @@ set listFilter(value:string){
     console.log("In Setter:", value);
     this.filteredEvents = this.performFilter(value);
 }
-  
+
   constructor(private currentEvents: SportsDBService) { }
 
   ngOnInit(): void {
     this.currentEvents.GetEvents().subscribe(
       (response:any) => {console.log(response);
-        this.eventsList= response; 
+        this.eventsList= response;
         this.filteredEvents = this.eventsList.events;
       });
-    
+
   }
 
   performFilter(filterBy: string) {
     console.log(filterBy);
     filterBy = filterBy.toLocaleLowerCase();
     return this.eventsList.events.filter( (event: Event) => event.strEvent.toLocaleLowerCase().includes(filterBy));
+  }
+
+  Toggle(eventId: number){
+    console.log("toggleClicked");
+    let detailPanel = document.getElementById("eventDetail" + eventId);
+    console.log(detailPanel);
+
+    if(detailPanel.style.display === "none"){
+      detailPanel.style.display = "inherit";
+    }
+    else if(detailPanel.style.display === "inherit"){
+      detailPanel.style.display = "none";
+    }
   }
 }
