@@ -1,0 +1,22 @@
+<div class="searchBar">
+<p>Search by City:</p>
+<input type="text" [(ngModel)]="teamName">
+<button (click)="Submit()">Submit</button>
+</div>
+
+<div *ngIf="searchResult">
+  <div class="searchBar">
+    <div *ngFor="let result of searchResult.teams">
+
+        <a [routerLink]="['/team-detail/' + result.idTeam]">
+            <img style="width:100px" src="{{result.strTeamBadge}}">
+            <p> {{result.strTeam}}</p>
+        </a>
+
+        <button *ngIf="currentUser" (click)="AddFavorite(result.idTeam, result.strTeamBadge, result.strTeam)">Add Team to Favorites</button>
+    </div>
+    <div *ngIf="!searchResult.teams">
+        <p>No results found.</p>
+    </div>
+</div>
+</div>

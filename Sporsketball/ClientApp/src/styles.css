@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+div{
+  padding: 3px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.flexbox{
+  border: 2px #008b49 solid;
+  border-radius: 10px;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-evenly;
+  background-color: #c5d6d8;
+  padding: 5px;
+}
+
+
+
+#sportsboard{
+  min-width:30%;
+  height:500px;
+  overflow-y: scroll;
+}
+
+#currentevents{
+  overflow-y: scroll;
+  min-width:50%;
+  height: 500px;
+}
+
+button {
+  background-color: #008b49;
+  border-radius: 4px;
+  border: 1px solid black;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+body{
+  color: black;
+  background-color: black;
+ /* background-image: linear-gradient(grey, black);
+  background-size: cover; */
+}
+
+/* width */
+
+::-webkit-scrollbar {
+
+  width: auto;
+
+  height: auto;
+
+}
+
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+
+  background: #f1f1f1;
+
+}
+
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+
+  background: #888;
+
+}
+
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #555;
+
+}

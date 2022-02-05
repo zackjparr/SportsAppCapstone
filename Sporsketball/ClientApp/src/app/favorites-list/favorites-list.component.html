@@ -1,0 +1,21 @@
+
+<div *ngIf="currentUser && currentUser.favoriteTeams" class="faveBar">
+    <h5>{{currentUser.displayName}}'s Favorite Teams</h5>
+  <div class="faveBox">
+<div *ngFor="let team of currentUser.favoriteTeams">
+    <a [routerLink]="['/team-detail/' + team.teamId]">
+    <img class="faveIndividual" style="width:75px;" src="{{team.thumbnail}}"/>
+    </a>
+    <div class="hoverOver">{{team.teamName}}</div>
+    <button class="addFaveButton" (click)="DeleteTeam(team.faveId)">Remove From Favorites</button>
+</div>
+</div>
+<div *ngIf="currentUser && currentUser.favoriteTeams.length === 0">
+  <p>No teams to display!
+  <a [routerLink]="['/search']">Click here</a> to search for teams </p>
+</div>
+
+<!--
+<br/>
+    <button (click)="DeleteTeam(team.faveId)">Remove Team</button>-->
+

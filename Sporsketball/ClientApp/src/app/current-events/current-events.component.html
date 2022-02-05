@@ -1,0 +1,14 @@
+<h5>Current Events</h5>
+<input class="filterBar" type="text" [(ngModel)]="listFilter" placeholder="Filter by Event">
+
+<div *ngIf="eventsList">
+<div *ngFor="let event of filteredEvents">
+<div class="indivEvent">
+    <p>{{event.strEvent}}</p>
+    <p>{{event.strSport}} || {{event.strCountry}} || {{event.strLeague}}</p>
+    <p>{{event.strHomeTeam}}: {{event.intHomeScore}}</p>
+    <p>{{event.strAwayTeam}}: {{event.intAwayScore}}</p>
+    <p>{{event.dateEvent}}</p>
+</div>
+</div>
+</div>

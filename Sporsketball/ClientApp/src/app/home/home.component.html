@@ -1,0 +1,24 @@
+
+
+<div id="login" *ngIf="!currentUser">
+    <p>Login to see your favorites</p>
+    <app-login></app-login>
+</div>
+
+
+<div id="favorites" *ngIf="currentUser">
+<app-favorites-list></app-favorites-list>
+</div>
+
+
+<div class="flexbox">
+<div id="sportsboard">
+    <app-sports-board></app-sports-board>
+</div>
+
+<div id="currentevents">
+    <app-current-events></app-current-events>
+
+</div>
+
+</div>

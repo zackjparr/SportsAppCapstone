@@ -1,0 +1,29 @@
+<div class="updateBox"> 
+    <h5>Update User Profile</h5>
+    <p>Enter Username</p>
+    <input type="text" [(ngModel)]="currentUser.username">
+    <p>Password</p>
+    <input type="password" [(ngModel)]="currentUser.password">
+    <p>Enter Display Name</p>
+    <input type="text" [(ngModel)]="currentUser.displayName">
+    <p>Enter Email Address</p>
+    <input type="text" [(ngModel)]="currentUser.email">
+    <p>Avatar</p>
+    <div>
+        <input type="radio" name="avatar" [(ngModel)]="currentUser.avatar" value="assets/garfball.png">
+        <img style="width:100px" src="assets\garfball.png"/>
+        <input type="radio" name="avatar" [(ngModel)]="currentUser.avatar" value="assets/garfbase.png">
+        <img style="width:100px" src="assets\garfbase.png"/>
+        <input type="radio" name="avatar" [(ngModel)]="currentUser.avatar" value="assets/garffoot.png">
+        <img style="width:100px" src="assets\garffoot.png"/>
+        <input type="radio" name="avatar" [(ngModel)]="currentUser.avatar" value="assets/garfsoccer.png">
+        <img style="width:100px" src="assets\garfsoccer.png"/>
+    </div>
+
+    <button (click)="Submit()">Update</button>
+
+</div>
+
+<div>
+    <app-favorites-list></app-favorites-list>
+</div>

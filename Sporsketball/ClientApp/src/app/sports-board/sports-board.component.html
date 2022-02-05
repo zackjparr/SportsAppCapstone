@@ -1,0 +1,16 @@
+<h5><img src="assets\sportstalk.png"/></h5>
+
+<div *ngFor="let post of board">
+    <div class="indivPost">
+    <p>{{post.postBody}}</p>
+    <p>Poster Name: {{post.user.displayName}}</p>
+
+    <div *ngIf="currentUser && currentUser.userId === post.userId">
+    <button (click)="DeletePost(post.postId)">Delete Post</button>
+    </div>
+    </div>
+</div>
+
+<div *ngIf="currentUser">
+    <app-create-post></app-create-post>
+</div>

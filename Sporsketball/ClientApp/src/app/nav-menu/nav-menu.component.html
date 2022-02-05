@@ -1,0 +1,59 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img style="max-width: 100%;max-height: 100%;" src="assets/logocrop.png"/>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li
+            class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/search']"
+              >Search For Teams</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/sports-board']"
+              >SportsTalkTM Board</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="current">
+            <a class="nav-link text-dark" [routerLink]="['/update-user']"
+              ><img style="width:60px;"src="{{current.avatar}}"/></a
+              >
+          </li>
+          <li *ngIf="current">
+            <button (click)="Logout()">Log out</button>
+          </li>
+          <li *ngIf="!current" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/login']"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

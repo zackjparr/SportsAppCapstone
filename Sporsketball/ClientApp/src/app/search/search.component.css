@@ -1,0 +1,7 @@
+.searchBar{
+  align-items: stretch;
+  text-align: center;
+  background-color: #c5d6d8;
+  border-radius: 10px;
+  border: 2px #008b49 solid;
+}

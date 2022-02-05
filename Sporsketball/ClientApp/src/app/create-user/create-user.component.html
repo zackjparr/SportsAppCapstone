@@ -1,0 +1,25 @@
+<div class="createBox">
+    <h5>Create User Profile</h5>
+    <p>Username</p>
+    <input type="text" [(ngModel)]="newUser.username" required>
+    <p>Password</p>
+    <input type="password" [(ngModel)]="newUser.password" required>
+    <p>Display Name</p>
+    <input type="text" [(ngModel)]="newUser.displayName">
+    <p>Email Address</p>
+    <input type="text" [(ngModel)]="newUser.email">
+    <p>Choose an Avatar:</p>
+    <div>
+    <input type="radio" name="avatar" [(ngModel)]="newUser.avatar" value="assets/garfball.png">
+    <img style="width:100px" src="assets\garfball.png"/>
+    <input type="radio" name="avatar" [(ngModel)]="newUser.avatar" value="assets/garfbase.png">
+    <img style="width:100px" src="assets\garfbase.png"/><br/>
+    <input type="radio" name="avatar" [(ngModel)]="newUser.avatar" value="assets/garffoot.png">
+    <img style="width:100px" src="assets\garffoot.png"/>
+    <input type="radio" name="avatar" [(ngModel)]="newUser.avatar" value="assets/garfsoccer.png">
+    <img style="width:100px" src="assets\garfsoccer.png"/>
+    </div>
+
+    <button (click)="Submit()">Create</button>
+
+</div>
