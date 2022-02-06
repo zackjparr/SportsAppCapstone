@@ -3,7 +3,7 @@
 //   import { Convert, CurrentEvents } from "./file";
 //
 //   const currentEvents = Convert.toCurrentEvents(json);
-export interface CurrentEvents{events: Event[]}
+export interface CurrentEvents{events: Event[]; results: Event[];}
 export interface Event {
     idEvent?:           string;
     idAPIfootball?:     string;

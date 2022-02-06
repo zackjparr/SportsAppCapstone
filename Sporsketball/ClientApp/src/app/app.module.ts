@@ -16,6 +16,9 @@ import { CurrentEventsComponent } from './current-events/current-events.componen
 import { SearchComponent } from './search/search.component';
 import { IndividualTeamComponent } from './individual-team/individual-team.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { TeamEventDetailComponent } from './team-event-detail/team-event-detail.component';
+import { TeamRosterComponent } from './team-roster/team-roster.component';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { CreatePostComponent } from './create-post/create-post.component';
     SearchComponent,
     IndividualTeamComponent,
     CreatePostComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    TeamEventDetailComponent,
+    TeamRosterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

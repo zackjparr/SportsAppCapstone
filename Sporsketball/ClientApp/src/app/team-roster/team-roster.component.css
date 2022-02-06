@@ -1,0 +1,21 @@
+.teamBox{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playerBox{
+    padding:5px;
+    width:160px;
+    height: 220px;
+}
+
+img{
+    border-radius:20px;
+}
+
+p{
+    margin: 0;
+}

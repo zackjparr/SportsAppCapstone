@@ -9,6 +9,7 @@ namespace Sporsketball.Models
     public class EventsData
     {
         public Event[] events { get; set; }
+        public Event[] results { get; set; }
     }
 
     public class Event

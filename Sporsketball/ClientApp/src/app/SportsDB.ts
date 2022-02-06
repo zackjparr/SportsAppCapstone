@@ -39,6 +39,10 @@ export interface Team {
     strCountry?: string;
     strTeamBadge?: string;
     strTeamJersey?: string;
+    strTeamFanart1?: string;
+    strTeamFanart2?: string;
+    strTeamFanart3?: string;
+    strTeamFanart4?: string;
     strTeamLogo?: string;
     strTeamBanner?: string;
     strYoutube?: string;

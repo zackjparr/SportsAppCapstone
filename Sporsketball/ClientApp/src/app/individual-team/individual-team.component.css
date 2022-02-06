@@ -19,6 +19,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    border: black 2px solid;
 }
 
 .bannerDiv{
@@ -31,4 +33,41 @@
   background-color: #c5d6d8;
   border-radius: 10px;
   border: 2px #008b49 solid;
+}
+
+.bodyBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+}
+
+.pageImg{
+    width: 500px; 
+    border:2px black solid; 
+    border-radius: 10px;
+    margin:10px;
+}
+
+.fanartBox{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teamHistory{
+    max-width:75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stadiumBox{
+    min-width:500px;
+}
+
+.bottomInfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }

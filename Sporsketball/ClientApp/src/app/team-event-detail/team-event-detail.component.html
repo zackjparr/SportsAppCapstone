@@ -1,0 +1,18 @@
+<div>
+    <h5>Most Recent Events</h5>
+    <div *ngFor="let event of recentEvents.results">
+        <p>{{event.dateEvent | date}} | {{event.strHomeTeam}} {{event.intHomeScore}} - {{event.intAwayScore}} {{event.strAwayTeam}} | {{event.strVenue}} {{event.strCountry}}</p>
+    </div>
+    <div *ngIf="recentEvents.results === null">
+        <p>No events to display</p>
+    </div>
+</div>
+<div>
+    <h5>Upcoming Events</h5>
+    <div *ngFor="let event of upcomingEvents.events">
+        <p>{{event.dateEvent | date}} | {{event.strHomeTeam}} - {{event.strAwayTeam}} | {{event.strVenue}} {{event.strCountry}} | {{event.strTime}}</p>
+    </div>
+    <div *ngIf="upcomingEvents.events === null">
+        <p>No events to display</p>
+    </div>
+</div>

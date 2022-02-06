@@ -23,6 +23,18 @@ export class SportsDBService {
     console.log(id);
     return this.http.get(this.serviceUrl + id);
   }
+
+  GetRecentEventsById(teamId: number): Observable<any> {
+    return this.http.get(this.serviceUrl + `recentevents/${teamId}`);
+  }
+
+  GetUpcomingEventsById(teamId: number): Observable<any> {
+    return this.http.get(this.serviceUrl + `upcomingevents/${teamId}`);
+  }
+
+  GetPlayerRosterById(teamId: number): Observable<any>{
+    return this.http.get(this.serviceUrl + `roster/${teamId}`);
+  }
 }
 
 

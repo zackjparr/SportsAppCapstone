@@ -54,10 +54,17 @@ namespace Sporsketball.Models
         public string strCountry { get; set; }
         public string strTeamBadge { get; set; }
         public string strTeamJersey { get; set; }
+
+        public string strTeamFanart1 { get; set; }
+        public string strTeamFanart2 { get; set; }
+        public string strTeamFanart3 { get; set; }
+        public string strTeamFanart4 { get; set; }
         public string strTeamLogo { get; set; }
         public string strTeamBanner { get; set; }
         public string strYoutube { get; set; }
         //public string strLocked { get; set; }
+
+
     }
 
 }

@@ -1,0 +1,9 @@
+<div class="teamBox">
+<p *ngIf="teamRoster.player === null">No player info to display.</p>
+<div *ngFor="let p of teamRoster.player" class="playerBox">
+        <img *ngIf="p.strCutout" style="width:150px" src="{{p.strCutout}}">
+        <img *ngIf="p.strCutout === null" style="width:150px" src="{{p.strThumb}}">
+        <img *ngIf="p.strCutout === null && p.strThumb===null " style="width:150px" src="assets/bigava.png">
+        <p style="font-weight:bold;">{{p.strPlayer}}</p>
+        <p>{{p.strPosition}}</p>
+</div>
