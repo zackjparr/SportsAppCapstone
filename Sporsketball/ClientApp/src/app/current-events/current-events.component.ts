@@ -36,7 +36,7 @@ set listFilter(value:string){
   performFilter(filterBy: string) {
     console.log(filterBy);
     filterBy = filterBy.toLocaleLowerCase();
-    return this.eventsList.events.filter( (event: Event) => event.strEvent.toLocaleLowerCase().includes(filterBy));
+    return this.eventsList.events.filter( (event: Event) => event.strEvent.toLocaleLowerCase().includes(filterBy) || event.strLeague.toLocaleLowerCase().includes(filterBy));
   }
 
   Toggle(eventId: number){

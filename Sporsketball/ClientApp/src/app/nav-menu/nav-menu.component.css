@@ -19,5 +19,6 @@ html {
 
 .navbar{
   background-color: #c5d6d8 !important;
+  border-bottom: 2px #008b49 solid;
 }
 

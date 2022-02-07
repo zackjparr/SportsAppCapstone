@@ -1,4 +1,23 @@
-.createBox{
-    border: 2px green solid;
-    border-radius: 5px;
+.updateBox{
+    align-items: stretch;
+    text-align: center;
+    background-color: #c5d6d8;
+    border-radius: 10px;
+    border: 2px #008b49 solid;
 }
+
+input{
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom:10px;
+    padding:0;
+  }
+
+  p{
+    margin-top: 10px;
+    margin-bottom:0px;
+  }
+
+  img{
+    margin-right: 15px;
+  }

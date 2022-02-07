@@ -5,3 +5,16 @@
   border-radius: 10px;
   border: 2px #008b49 solid;
 }
+
+.resultBox{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  gap: 10px 10px;
+  background-color: #c5d6d8;
+  border-radius: 10px;
+  border: 2px #008b49 solid;
+}

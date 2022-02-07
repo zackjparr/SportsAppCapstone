@@ -46,6 +46,8 @@ export interface Team {
     strTeamLogo?: string;
     strTeamBanner?: string;
     strYoutube?: string;
+    isFavorite?: boolean;
+    buttonText?: string;
 }
 
 // Converts JSON strings to/from your types

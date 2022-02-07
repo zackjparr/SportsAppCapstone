@@ -1,7 +1,7 @@
 <div>
     <h5>Most Recent Events</h5>
     <div *ngFor="let event of recentEvents.results">
-        <p>{{event.dateEvent | date}} | {{event.strHomeTeam}} {{event.intHomeScore}} - {{event.intAwayScore}} {{event.strAwayTeam}} | {{event.strVenue}} {{event.strCountry}}</p>
+        <p>{{event.dateEvent | date}} | {{event.strHomeTeam}} {{event.intHomeScore}} - {{event.intAwayScore}} {{event.strAwayTeam}}  {{event.strVenue}} {{event.strCountry}}</p>
     </div>
     <div *ngIf="recentEvents.results === null">
         <p>No events to display</p>

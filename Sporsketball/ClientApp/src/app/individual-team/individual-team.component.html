@@ -1,7 +1,7 @@
 <div *ngIf="individualTeam">
     <div class="indivualTeam">
     <div class="bannerDiv">
-    <img class="banner" src="{{individualTeam.teams[0].strTeamBanner}}" />
+    <img *ngIf="individualTeam.teams[0].strTeamBanner" class="banner" src="{{individualTeam.teams[0].strTeamBanner}}" />
     <div *ngIf="!individualTeam.teams[0].strTeamBanner">
         <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{individualTeam.teams[0].strTeam | uppercase}}</h3>
     </div>
@@ -14,8 +14,8 @@
         <p class="socialMedia">|</p>
         <a class="socialMedia" href="http://{{individualTeam.teams[0].strWebsite}}">Official Website</a>
 
-        <button *ngIf="!isFavorite && currentUser" class="addFaveButton" (click)="AddFavorite(individualTeam.teams[0].idTeam, individualTeam.teams[0].strTeamBadge, individualTeam.teams[0].strTeam)">Add Team to Favorites</button>
-        <button *ngIf="isFavorite && currentUser" class="addFaveButton" (click)="DeleteTeam(individualTeam.teams[0].idTeam)">Remove From Favorites</button>
+        <button *ngIf="!isFavorite && currentUser" class="addFaveButton" (click)="AddFavorite(individualTeam.teams[0].idTeam, individualTeam.teams[0].strTeamBadge, individualTeam.teams[0].strTeam)">{{buttonText}}</button>
+        <button *ngIf="isFavorite && currentUser" class="addFaveButton" (click)="DeleteTeam(individualTeam.teams[0].idTeam)">Remove from Favorites</button>
     </div>
 
     </div>

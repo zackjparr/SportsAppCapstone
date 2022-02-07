@@ -5,15 +5,16 @@
 </div>
 
 <div *ngIf="searchResult">
-  <div class="searchBar">
+  <div class="resultBox">
     <div *ngFor="let result of searchResult.teams">
 
         <a [routerLink]="['/team-detail/' + result.idTeam]">
-            <img style="width:100px" src="{{result.strTeamBadge}}">
+            <img style="width:150px" src="{{result.strTeamBadge}}">
             <p> {{result.strTeam}}</p>
         </a>
 
-        <button *ngIf="currentUser" (click)="AddFavorite(result.idTeam, result.strTeamBadge, result.strTeam)">Add Team to Favorites</button>
+        <button *ngIf="currentUser && !result.isFavorite" (click)="AddFavorite(result.idTeam, result.strTeamBadge, result.strTeam)">{{result.buttonText}}</button>
+        <button *ngIf="currentUser && result.isFavorite" (click)="DeleteTeam(result.idTeam)">Remove from Favorites</button>
     </div>
     <div *ngIf="!searchResult.teams">
         <p>No results found.</p>
